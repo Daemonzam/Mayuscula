@@ -14,9 +14,7 @@ public class Main {
             System.out.println(palabra);
         }
         crearListado listadoAConvertir = list -> {
-            for (int i = 0; i < list.size(); i++) {
-                list.set(i, list.get(i).toUpperCase());
-            }
+            list.replaceAll(String::toUpperCase);
             return list;
         };
         List<String> listaEnMayusculas = listadoAConvertir.convertirAMayusculas(listaPalabras);
